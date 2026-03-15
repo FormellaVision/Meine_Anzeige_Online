@@ -1,0 +1,51 @@
+{
+  "name": "Formella Vision",
+  "slug": "formella-vision",
+  "categorySlug": "webdesign-digitales",
+  "tags": ["webdesign", "website", "seo", "digitales marketing", "hamburg", "branding"],
+  "areaSlug": "hamburg-mitte",
+  "shortDescription": "Professionelle Webseiten für Hamburger Unternehmen — klar, schnell und konversionsstark.",
+  "longDescription": "Formella Vision steht für Webdesign, das nicht nur schön aussieht, sondern auch messbare Ergebnisse liefert. Gegründet von Christian Formella, einem erfahrenen Webdesigner mit Herz für Hamburger Unternehmen.\n\nWir bauen Websites, die Ihre Kunden begeistern und überzeugen — mit modernem Design, blitzschneller Ladezeit und suchmaschinenoptimierter Struktur. Jedes Projekt beginnt mit einem echten Gespräch: Wer sind Sie? Was bewegt Ihre Kunden? Was wollen Sie erreichen?\n\nUnsere Stärke liegt in der Kombination aus handwerklichem Können und strategischem Denken. Eine Website ist kein Selbstzweck — sie ist Ihr bester Vertriebsmitarbeiter, der rund um die Uhr arbeitet.\n\nAls Mitgründer von Meine Anzeige Online bringen wir nicht nur technisches Know-how mit, sondern auch ein gewachsenes Netzwerk aus vertrauenswürdigen Hamburger Partnern.",
+  "highlights": ["Geprüfter Partner", "Gründungsmitglied", "Individuelles Design", "Lighthouse 90+"],
+  "services": ["Webdesign", "Website-Entwicklung", "SEO-Optimierung", "Branding & Corporate Identity", "Wartung & Support", "Website-Audit"],
+  "contact": {
+    "contactName": "Christian Formella",
+    "phone": "+49 173 3878209",
+    "email": "info@formellavision.de",
+    "website": "https://formellavision.de",
+    "whatsapp": "https://wa.me/491733878209"
+  },
+  "social": {
+    "facebook": "",
+    "instagram": "https://instagram.com/formella.vision"
+  },
+  "address": {
+    "street": "Mönckebergstraße 1",
+    "zip": "20095",
+    "city": "Hamburg",
+    "googleMapsUrl": "https://maps.google.com/?q=Hamburg+Mitte"
+  },
+  "openingHours": {
+    "monday": "09:00–18:00",
+    "tuesday": "09:00–18:00",
+    "wednesday": "09:00–18:00",
+    "thursday": "09:00–18:00",
+    "friday": "09:00–16:00",
+    "saturday": "Geschlossen",
+    "sunday": "Geschlossen"
+  },
+  "images": {
+    "logo": "https://res.cloudinary.com/dqkld61zu/image/upload/v1773517266/Christian_Formella_Profilbild_01_raqdy9.webp",
+    "icon": "https://res.cloudinary.com/dqkld61zu/image/upload/v1773517266/Christian_Formella_Profilbild_01_raqdy9.webp",
+    "gallery": []
+  },
+  "recommendedBy": {
+    "name": "PhysioWohltat Norderstedt",
+    "slug": "physiowohltat-norderstedt",
+    "note": "Christian hat unsere Website gebaut — professionell, schnell und auf den Punkt."
+  },
+  "role": "founder",
+  "status": "active",
+  "featured": true,
+  "createdAt": "2026-03-14"
+}

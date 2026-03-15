@@ -1,0 +1,52 @@
+{
+  "_placeholder": true,
+  "name": "Rechtsanwalt Berger",
+  "slug": "rechtsanwalt-berger",
+  "categorySlug": "recht-finanzen",
+  "tags": ["rechtsanwalt", "arbeitsrecht", "vertragsrecht", "hamburg-nord", "kanzlei"],
+  "areaSlug": "hamburg-nord",
+  "shortDescription": "Klare Rechtsberatung für Unternehmer in Hamburg — ohne Umwege, ohne Fachjargon.",
+  "longDescription": "Kanzlei Berger in Hamburg-Nord steht für pragmatische Rechtsberatung, die Unternehmer wirklich weiterbringt. Kein endloses Schreiben von Schriftsätzen, sondern klare Antworten und schnelle Lösungen.\n\nSchwerpunkte sind Arbeitsrecht, Vertragsgestaltung und allgemeines Wirtschaftsrecht. Ob Mustervertrag, Kündigungsschutzklage oder Geschäftsführerhaftung — wir kennen die Herausforderungen kleiner und mittlerer Unternehmen.\n\nAls MAO-Partner bieten wir eine kostenlose Erstberatung (30 Minuten) für alle Netzwerkmitglieder. Denn wer gut vernetzt ist, sollte auch rechtlich auf der sicheren Seite stehen.\n\nUnsere Kanzlei ist bewusst klein und persönlich. Sie erhalten bei uns immer direkten Kontakt zum Anwalt — keine Assistenten, keine langen Wartelisten.",
+  "highlights": ["Geprüfter Partner", "Kostenlose Erstberatung für MAO-Mitglieder", "Schnelle Reaktionszeit", "Klare Kommunikation"],
+  "services": ["Arbeitsrecht", "Vertragsrecht", "Gesellschaftsrecht", "Allgemeines Wirtschaftsrecht", "Außergerichtliche Einigung", "Vertragsgestaltung"],
+  "contact": {
+    "contactName": "Dr. Klaus Berger",
+    "phone": "+49 40 99887766",
+    "email": "kanzlei@berger-recht-hh.de",
+    "website": "https://berger-recht-hh.de",
+    "whatsapp": ""
+  },
+  "social": {
+    "facebook": "",
+    "instagram": ""
+  },
+  "address": {
+    "street": "Barmbeker Str. 12",
+    "zip": "22303",
+    "city": "Hamburg",
+    "googleMapsUrl": "https://maps.google.com/?q=Barmbeker+Str+12+Hamburg"
+  },
+  "openingHours": {
+    "monday": "09:00–17:00",
+    "tuesday": "09:00–17:00",
+    "wednesday": "09:00–17:00",
+    "thursday": "09:00–18:00",
+    "friday": "09:00–14:00",
+    "saturday": "Geschlossen",
+    "sunday": "Geschlossen"
+  },
+  "images": {
+    "logo": "",
+    "icon": "",
+    "gallery": []
+  },
+  "recommendedBy": {
+    "name": "Steuerberatung Meyer",
+    "slug": "hamburg-steuerberatung-meyer",
+    "note": "Klaus hat für uns einen wichtigen Vertrag geprüft — präzise und verlässlich."
+  },
+  "role": "partner",
+  "status": "active",
+  "featured": false,
+  "createdAt": "2026-03-14"
+}

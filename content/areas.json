@@ -1,0 +1,11 @@
+[
+  { "name": "Hamburg (gesamt)", "slug": "stadt-hamburg", "description": "Alle Partner aus der gesamten Hansestadt Hamburg." },
+  { "name": "Hamburg-Mitte", "slug": "hamburg-mitte", "description": "Partner aus dem Stadtkern: HafenCity, Altstadt, Neustadt, St. Pauli und mehr." },
+  { "name": "Altona", "slug": "altona", "description": "Partner aus Altona, Ottensen, Bahrenfeld, Blankenese und der Elbvororte." },
+  { "name": "Eimsbüttel", "slug": "eimsbuettel", "description": "Partner aus Eimsbüttel, Eppendorf, Hoheluft und Lokstedt." },
+  { "name": "Hamburg-Nord", "slug": "hamburg-nord", "description": "Partner aus Barmbek, Winterhude, Uhlenhorst, Alsterdorf und Fuhlsbüttel." },
+  { "name": "Wandsbek", "slug": "wandsbek", "description": "Partner aus Wandsbek, Rahlstedt, Volksdorf, Jenfeld und Umgebung." },
+  { "name": "Bergedorf", "slug": "bergedorf", "description": "Partner aus Bergedorf, Lohbrügge, Billwerder und den Vier- und Marschlanden." },
+  { "name": "Harburg", "slug": "harburg", "description": "Partner aus Harburg, Wilhelmsburg, Heimfeld und dem Hamburger Süden." },
+  { "name": "Norderstedt", "slug": "norderstedt", "description": "Partner aus Norderstedt und dem nördlichen Hamburger Umland." }
+]

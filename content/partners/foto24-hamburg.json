@@ -1,0 +1,66 @@
+{
+  "name": "Foto24 Hamburg",
+  "slug": "foto24-hamburg",
+  "categorySlug": "fotografie-medien",
+  "tags": ["fotografie", "hochzeit", "portrait", "sport", "events", "business", "studio", "outdoor", "hamburg"],
+  "areaSlug": "stadt-hamburg",
+  "shortDescription": "Ihr Fotograf in Hamburg für besondere Momente — von Hochzeiten über Familienportraits bis Business-Aufnahmen. Michael Wolfsohn liefert schnell, professionell und zu fairen Preisen.",
+  "longDescription": "Foto24 Hamburg steht für unkomplizierte, professionelle Fotografie in Hamburg und Umgebung. Ob Hochzeit, Familienfeier, Sportveranstaltung, Firmeneröffnung oder Geschäftsportraits — Michael Wolfsohn hält Ihre besonderen Momente fest.\n\nDas Angebot umfasst sowohl Studio- als auch Outdoor-Shootings. Von stilvollen Hochzeitsreportagen über natürliche Kinder- und Familienportraits bis hin zu professionellen Website-Fotos und Videos — alles aus einer Hand.\n\nGetreu dem Motto \u201eSchnell \u2013 Gut \u2013 G\u00fcnstig\u201c verbindet Foto24 Hamburg Qualität mit einem fairen Preis-Leistungs-Verhältnis. Als Gründungsmitglied von Meine Anzeige Online bringt Michael Wolfsohn seine kreative Energie auch ins Netzwerk ein.",
+  "highlights": [
+    "Geprüfter Partner",
+    "Gründungsmitglied",
+    "Studio- und Outdoor-Shootings",
+    "Motto: Schnell – Gut – Günstig",
+    "Vielseitig: Hochzeit, Portrait, Sport, Business"
+  ],
+  "services": [
+    "Hochzeitsfotografie",
+    "Familien- & Kinderportraits",
+    "Sportfotografie",
+    "Eventfotografie (Geburtstage, Jubiläen, Eröffnungen)",
+    "Business- & Bewerbungsfotos",
+    "Website-Fotos & Videos",
+    "Studio-Shootings",
+    "Outdoor-Shootings"
+  ],
+  "contact": {
+    "contactName": "Michael Wolfsohn",
+    "phone": "+49 176 72755964",
+    "email": "physiowohltat@gmx.de",
+    "website": "https://foto24.hamburg",
+    "whatsapp": "https://wa.me/491767275596"
+  },
+  "social": {
+    "facebook": "",
+    "instagram": ""
+  },
+  "address": {
+    "street": "",
+    "zip": "",
+    "city": "Hamburg",
+    "googleMapsUrl": "https://www.google.com/maps/search/foto24+hamburg"
+  },
+  "openingHours": {
+    "monday": "Auf Anfrage",
+    "tuesday": "Auf Anfrage",
+    "wednesday": "Auf Anfrage",
+    "thursday": "Auf Anfrage",
+    "friday": "Auf Anfrage",
+    "saturday": "Auf Anfrage",
+    "sunday": "Auf Anfrage"
+  },
+  "images": {
+    "logo": "https://res.cloudinary.com/dqkld61zu/image/upload/v1773516818/Michael_Wolfsohn_Foto24-Hamburg_q7nvyc.webp",
+    "icon": "https://res.cloudinary.com/dqkld61zu/image/upload/v1773516818/Michael_Wolfsohn_Foto24-Hamburg_q7nvyc.webp",
+    "gallery": []
+  },
+  "recommendedBy": {
+    "name": "PhysioWohltat Norderstedt",
+    "slug": "physiowohltat-norderstedt",
+    "note": "Gründungsmitglied — Michael Wolfsohn bringt sein Auge fürs Detail auch vor die Kamera."
+  },
+  "role": "founder",
+  "status": "active",
+  "featured": true,
+  "createdAt": "2026-03-14"
+}

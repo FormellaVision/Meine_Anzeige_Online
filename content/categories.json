@@ -1,0 +1,18 @@
+[
+  { "name": "Gesundheit & Wellness", "slug": "gesundheit-wellness", "icon": "Heart", "description": "Physiotherapie, Massage, Wellnessangebote und Gesundheitsdienstleister in Hamburg." },
+  { "name": "Webdesign & Digitales", "slug": "webdesign-digitales", "icon": "Monitor", "description": "Webdesign, Entwicklung, SEO und digitale Lösungen für Hamburger Unternehmen." },
+  { "name": "Handwerk & Bau", "slug": "handwerk-bau", "icon": "Hammer", "description": "Handwerker, Bauunternehmen und Renovierungsexperten aus Hamburg." },
+  { "name": "Gastronomie & Catering", "slug": "gastronomie-catering", "icon": "UtensilsCrossed", "description": "Restaurants, Cafés, Caterer und Eventgastronomie in Hamburg." },
+  { "name": "Recht & Finanzen", "slug": "recht-finanzen", "icon": "Scale", "description": "Rechtsanwälte, Steuerberater und Finanzexperten in Hamburg." },
+  { "name": "Immobilien", "slug": "immobilien", "icon": "Home", "description": "Makler, Hausverwaltungen und Immobilienberater in Hamburg." },
+  { "name": "Beauty & Friseur", "slug": "beauty-friseur", "icon": "Scissors", "description": "Friseursalons, Kosmetik, Nagelstudios und Beauty-Services in Hamburg." },
+  { "name": "Fotografie & Medien", "slug": "fotografie-medien", "icon": "Camera", "description": "Fotografen, Videografen und Medienproduzenten aus Hamburg." },
+  { "name": "Coaching & Beratung", "slug": "coaching-beratung", "icon": "Users", "description": "Business-Coaches, Berater und Mentoren für Hamburger Unternehmer." },
+  { "name": "Auto & Mobilität", "slug": "auto-mobilitaet", "icon": "Car", "description": "Kfz-Werkstätten, Autohändler und Mobilitätsdienstleister in Hamburg." },
+  { "name": "Marketing & Werbung", "slug": "marketing-werbung", "icon": "Megaphone", "description": "Marketing-Agenturen, Werbedesigner und PR-Experten aus Hamburg." },
+  { "name": "Bildung & Kurse", "slug": "bildung-kurse", "icon": "GraduationCap", "description": "Weiterbildung, Sprachkurse und Coaches für berufliche Entwicklung in Hamburg." },
+  { "name": "IT & Technik", "slug": "it-technik", "icon": "Cpu", "description": "IT-Dienstleister, Techniker und Softwareentwickler in Hamburg." },
+  { "name": "Reinigung & Facility", "slug": "reinigung-facility", "icon": "Sparkles", "description": "Reinigungsunternehmen, Facility-Management und Hausmeisterservice in Hamburg." },
+  { "name": "Tier & Natur", "slug": "tier-natur", "icon": "PawPrint", "description": "Tierärzte, Hundetrainer, Gärtner und Naturdienstleister in Hamburg." },
+  { "name": "Veranstaltungen & Event", "slug": "veranstaltungen-event", "icon": "PartyPopper", "description": "Eventplaner, Locations und Eventdienstleister in Hamburg." }
+]

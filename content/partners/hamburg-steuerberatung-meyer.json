@@ -1,0 +1,52 @@
+{
+  "_placeholder": true,
+  "name": "Steuerberatung Meyer",
+  "slug": "hamburg-steuerberatung-meyer",
+  "categorySlug": "recht-finanzen",
+  "tags": ["steuerberatung", "buchführung", "jahresabschluss", "eimsbuettel", "selbstständige"],
+  "areaSlug": "eimsbuettel",
+  "shortDescription": "Verlässliche Steuerberatung für Selbstständige und kleine Unternehmen in Eimsbüttel — klar, persönlich und auf Augenhöhe.",
+  "longDescription": "Steuerberatung Meyer in Eimsbüttel begleitet Selbstständige, Freiberufler und kleine Unternehmen bei allen steuerlichen Angelegenheiten. Seit über zehn Jahren schätzen unsere Mandanten die persönliche Betreuung und die verständliche Kommunikation.\n\nKein Fachchinesisch, keine langen Wartezeiten — wir nehmen uns die Zeit, die Sie brauchen. Ob Existenzgründung, Jahresabschluss oder steuerliche Optimierung: Wir haben die passende Lösung.\n\nUnsere Kanzlei ist bewusst klein und persönlich gehalten. Jeder Mandant kennt seinen direkten Ansprechpartner — und das von Anfang an bis zum Abschluss.\n\nAls MAO-Partner empfehlen wir unsere Mandanten aktiv an andere Netzwerkmitglieder — denn gegenseitige Unterstützung ist unser Antrieb.",
+  "highlights": ["Geprüfter Partner", "Kassenzulassung", "Digitale Buchführung", "Feste Ansprechpartner"],
+  "services": ["Steuerberatung", "Buchführung", "Jahresabschluss", "Lohnabrechnung", "Existenzgründungsberatung", "Steuerliche Optimierung"],
+  "contact": {
+    "contactName": "Thomas Meyer",
+    "phone": "+49 40 12345678",
+    "email": "info@steuerberatung-meyer-hh.de",
+    "website": "https://steuerberatung-meyer-hh.de",
+    "whatsapp": ""
+  },
+  "social": {
+    "facebook": "",
+    "instagram": ""
+  },
+  "address": {
+    "street": "Osterstraße 45",
+    "zip": "20259",
+    "city": "Hamburg",
+    "googleMapsUrl": "https://maps.google.com/?q=Osterstraße+45+Hamburg"
+  },
+  "openingHours": {
+    "monday": "09:00–17:00",
+    "tuesday": "09:00–17:00",
+    "wednesday": "09:00–17:00",
+    "thursday": "09:00–18:00",
+    "friday": "09:00–14:00",
+    "saturday": "Geschlossen",
+    "sunday": "Geschlossen"
+  },
+  "images": {
+    "logo": "",
+    "icon": "",
+    "gallery": []
+  },
+  "recommendedBy": {
+    "name": "Formella Vision",
+    "slug": "formella-vision",
+    "note": "Thomas hat für uns von Anfang an klare Strukturen geschaffen — sehr empfehlenswert."
+  },
+  "role": "partner",
+  "status": "active",
+  "featured": false,
+  "createdAt": "2026-03-14"
+}

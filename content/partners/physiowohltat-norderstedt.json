@@ -1,0 +1,51 @@
+{
+  "name": "PhysioWohltat Norderstedt",
+  "slug": "physiowohltat-norderstedt",
+  "categorySlug": "gesundheit-wellness",
+  "tags": ["physiotherapie", "massage", "wellness", "rehabilitation", "norderstedt"],
+  "areaSlug": "norderstedt",
+  "shortDescription": "Ihr Zentrum für Physiotherapie und Wohlbefinden nördlich von Hamburg. Individuelle Behandlung, echte Ergebnisse.",
+  "longDescription": "PhysioWohltat in Norderstedt verbindet professionelle Physiotherapie mit einem ganzheitlichen Wellness-Ansatz. Unser erfahrenes Team behandelt Sie individuell — ob nach Verletzungen, bei chronischen Beschwerden oder zur Prävention.\n\nWir glauben: Gesundheit ist keine Selbstverständlichkeit. Deshalb nehmen wir uns Zeit für jeden Patienten und entwickeln gemeinsam einen Behandlungsplan, der wirklich funktioniert.\n\nVon klassischer Krankengymnastik über manuelle Therapie bis hin zu entspannenden Massagen — bei uns finden Sie alles unter einem Dach. Unser helles, modernes Praxisambiente lädt ein, sich zu erholen und zu regenerieren.\n\nAls Gründungsmitglied des MAO-Partnernetzwerks liegt uns der persönliche Austausch mit anderen Hamburger Unternehmern besonders am Herzen. Wir empfehlen gerne Partner, die wirklich liefern.",
+  "highlights": ["Geprüfter Partner", "Gründungsmitglied", "Kassenzulassung", "Schnelle Terminvergabe"],
+  "services": ["Physiotherapie", "Manuelle Therapie", "Massagen", "Sportrehabilitation", "Präventionskurse", "Hausbesuche auf Anfrage"],
+  "contact": {
+    "contactName": "Michael Wolfsohn",
+    "phone": "+49 173 3878209",
+    "email": "info@physiowohltat.de",
+    "website": "https://physiowohltat.de",
+    "whatsapp": "https://wa.me/491733878209"
+  },
+  "social": {
+    "facebook": "",
+    "instagram": ""
+  },
+  "address": {
+    "street": "Am Exerzierplatz 14",
+    "zip": "22419",
+    "city": "Norderstedt",
+    "googleMapsUrl": "https://maps.google.com/?q=Norderstedt"
+  },
+  "openingHours": {
+    "monday": "08:00–18:00",
+    "tuesday": "08:00–18:00",
+    "wednesday": "08:00–18:00",
+    "thursday": "08:00–18:00",
+    "friday": "08:00–16:00",
+    "saturday": "Auf Anfrage",
+    "sunday": "Geschlossen"
+  },
+  "images": {
+    "logo": "https://res.cloudinary.com/dqkld61zu/image/upload/v1773516818/Michael_Wolfsohn_Foto24-Hamburg_q7nvyc.webp",
+    "icon": "https://res.cloudinary.com/dqkld61zu/image/upload/v1773516818/Michael_Wolfsohn_Foto24-Hamburg_q7nvyc.webp",
+    "gallery": []
+  },
+  "recommendedBy": {
+    "name": "Formella Vision",
+    "slug": "formella-vision",
+    "note": "Michael und Christian kennen sich persönlich — gemeinsam gründeten sie das MAO-Netzwerk."
+  },
+  "role": "founder",
+  "status": "active",
+  "featured": true,
+  "createdAt": "2026-03-14"
+}

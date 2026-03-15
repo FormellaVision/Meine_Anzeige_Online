@@ -1,0 +1,40 @@
+{
+  "_INSTRUCTIONS": {
+    "filename": "MUST match slug: 'mein-event-monat-jahr.json'",
+    "slug": "only lowercase letters, numbers, hyphens",
+    "dateStart": "ISO 8601 format: '2026-06-15T09:00:00'",
+    "dateEnd": "ISO 8601 format: '2026-06-15T12:00:00'",
+    "areaSlug": "must match areas.json: stadt-hamburg | hamburg-mitte | altona | ...",
+    "cta.url": "ticket link, anmeldung URL or leave empty string",
+    "images.cover": "Cloudinary or https:// URL, can be empty string"
+  },
+  "title": "Veranstaltungsname",
+  "slug": "veranstaltungsname-monat-jahr",
+  "dateStart": "2026-06-15T09:00:00",
+  "dateEnd": "2026-06-15T12:00:00",
+  "areaSlug": "hamburg-mitte",
+  "locationName": "Name des Veranstaltungsorts",
+  "address": "Musterstraße 1, 20095 Hamburg",
+  "shortDescription": "Kurze Beschreibung der Veranstaltung in 1–2 Sätzen.",
+  "content": [
+    { "type": "h2", "text": "Über die Veranstaltung" },
+    { "type": "p", "text": "Ausführliche Beschreibung der Veranstaltung." },
+    { "type": "h3", "text": "Was Sie erwartet" },
+    { "type": "ul", "text": "" },
+    { "type": "li", "text": "Punkt 1" },
+    { "type": "li", "text": "Punkt 2" }
+  ],
+  "cta": {
+    "label": "Jetzt anmelden",
+    "url": "https://beispiel.de/anmeldung"
+  },
+  "images": {
+    "cover": "",
+    "gallery": []
+  },
+  "organizer": {
+    "name": "MAO – Meine Anzeige Online",
+    "contactEmail": "info@meineanzeige.online"
+  },
+  "featured": false
+}

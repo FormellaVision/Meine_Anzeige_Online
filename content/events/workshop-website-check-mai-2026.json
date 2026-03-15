@@ -1,0 +1,21 @@
+{
+  "title": "Workshop: Der Website-Check — Was wirklich zählt",
+  "slug": "workshop-website-check-mai-2026",
+  "dateStart": "2026-05-08T17:00:00+02:00",
+  "dateEnd": "2026-05-08T19:30:00+02:00",
+  "areaSlug": "hamburg-mitte",
+  "locationName": "Co-Working Space Hamburg Central",
+  "address": "Dammtorstr. 14, 20354 Hamburg",
+  "shortDescription": "Christian Formella zeigt live, was eine gute Website ausmacht — und worauf wir bei unserem Partneraudit achten.",
+  "content": [
+    { "type": "h2", "text": "Was macht eine wirklich gute Website aus?" },
+    { "type": "p", "text": "In diesem Workshop zeigt MAO-Mitgründer und Webdesigner Christian Formella, welche Faktoren wirklich entscheidend sind: Ladezeit, mobile Darstellung, klare Botschaften, Vertrauenssignale." },
+    { "type": "h2", "text": "Live-Analysen vor Ort" },
+    { "type": "p", "text": "Wer möchte, kann seine eigene Website mitbringen — Christian analysiert sie live und gibt konstruktives Feedback. Keine Kritik, nur hilfreiche Impulse." },
+    { "type": "p", "text": "Der Workshop ist kostenlos für alle MAO-Partner und Interessenten. Bringen Sie Fragen, Ihre Website-URL und Offenheit mit." }
+  ],
+  "cta": { "label": "Platz sichern", "url": "mailto:info@meineanzeige.online?subject=Anmeldung+Website-Check-Workshop" },
+  "images": { "cover": "", "gallery": [] },
+  "organizer": { "name": "Meine Anzeige Online", "contactEmail": "info@meineanzeige.online" },
+  "featured": false
+}

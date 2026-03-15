@@ -1,0 +1,21 @@
+{
+  "title": "MAO Partner-Stammtisch Mai 2026",
+  "slug": "partner-stammtisch-mai-2026",
+  "dateStart": "2026-05-22T18:30:00+02:00",
+  "dateEnd": "2026-05-22T21:00:00+02:00",
+  "areaSlug": "altona",
+  "locationName": "Restaurant Zur Alten Schule",
+  "address": "Große Bergstr. 81, 22767 Hamburg",
+  "shortDescription": "Der monatliche Stammtisch für alle MAO-Partner — informell, herzlich und immer gut besucht.",
+  "content": [
+    { "type": "h2", "text": "Herzlich willkommen beim Stammtisch" },
+    { "type": "p", "text": "Der Partner-Stammtisch ist unser entspanntes Abendformat — ohne Agenda, ohne Präsentationen. Einfach zusammenkommen, ein gutes Essen teilen und sich austauschen." },
+    { "type": "h2", "text": "Wer kommt?" },
+    { "type": "p", "text": "Alle aktiven MAO-Partner sind herzlich eingeladen. Interessierte können als Gast eines Partners teilnehmen. Bitte kurz per E-Mail Bescheid geben." },
+    { "type": "p", "text": "Jeder zahlt seinen eigenen Verzehr. Das Restaurant hält uns einen separaten Raum frei — Anmeldung dennoch erbeten, damit wir planen können." }
+  ],
+  "cta": { "label": "Ich komme!", "url": "mailto:info@meineanzeige.online?subject=Stammtisch+Mai+2026" },
+  "images": { "cover": "", "gallery": [] },
+  "organizer": { "name": "Meine Anzeige Online", "contactEmail": "info@meineanzeige.online" },
+  "featured": false
+}

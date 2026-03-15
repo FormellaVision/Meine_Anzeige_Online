@@ -1,0 +1,21 @@
+{
+  "title": "MAO Netzwerk-Frühstück April 2026",
+  "slug": "netzwerk-fruehstueck-april-2026",
+  "dateStart": "2026-04-10T09:00:00+02:00",
+  "dateEnd": "2026-04-10T11:30:00+02:00",
+  "areaSlug": "hamburg-mitte",
+  "locationName": "Café Prag",
+  "address": "Lange Reihe 20, 20099 Hamburg",
+  "shortDescription": "Unser erstes gemeinsames Frühstück: Partner kennenlernen, Ideen teilen, echte Verbindungen knüpfen.",
+  "content": [
+    { "type": "h2", "text": "Zusammenkommen und wachsen" },
+    { "type": "p", "text": "Das MAO Netzwerk-Frühstück ist unser regelmäßiges Format für alle aktiven Partner. Bei Kaffee, frischen Brötchen und guter Gesellschaft lernen wir uns besser kennen, tauschen Erfahrungen aus und schaffen echte Verbindungen." },
+    { "type": "h2", "text": "Was Sie erwartet" },
+    { "type": "p", "text": "Jedes Frühstück hat ein lockeres Thema — diesmal: 'Wie ich meinen ersten MAO-Partner empfehlen werde.' Kurze Vorstellungsrunden, offene Gespräche, keine Pitch-Pflicht." },
+    { "type": "p", "text": "Die Teilnehmerzahl ist bewusst auf 20 Personen begrenzt — damit es persönlich bleibt. Anmeldung daher unbedingt erforderlich." }
+  ],
+  "cta": { "label": "Jetzt anmelden", "url": "mailto:info@meineanzeige.online?subject=Anmeldung+Netzwerk-Frühstück+April" },
+  "images": { "cover": "", "gallery": [] },
+  "organizer": { "name": "Meine Anzeige Online", "contactEmail": "info@meineanzeige.online" },
+  "featured": true
+}
