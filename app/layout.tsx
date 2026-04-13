@@ -18,7 +18,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Meine Anzeige Online — Hamburgs Partnernetzwerk",
+    default: "Meine Anzeige Online. Hamburgs Partnernetzwerk",
     template: "%s | Meine Anzeige Online",
   },
   description:
