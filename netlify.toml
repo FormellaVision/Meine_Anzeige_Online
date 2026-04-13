@@ -2,5 +2,8 @@
 command = "npx next build"
 publish = ".next"
 
+[build.environment]
+NETLIFY_NEXT_VERIFY_FORMS = "false"
+
 [[plugins]]
 package = "@netlify/plugin-nextjs"
