@@ -47,6 +47,18 @@ export const RecommendedBySchema = z.object({
   note: z.string().optional(),
 });
 
+export const SpecialOfferSchema = z.object({
+  title: z.string().min(1, "title is required"),
+  description: z.string(),
+  price: z.string(),
+  contactMethods: z.array(z.enum(["whatsapp", "email"])).optional().default([]),
+});
+
+export const PartnerSpecialOffersSchema = z.object({
+  title: z.string().min(1, "title is required"),
+  offers: z.array(SpecialOfferSchema),
+});
+
 export const PartnerSchema = z.object({
   name: z.string().min(1, "name is required"),
   slug: z.string().regex(/^[a-z0-9-]+$/, "slug must be lowercase letters, numbers, and hyphens only"),
@@ -62,7 +74,8 @@ export const PartnerSchema = z.object({
   address: PartnerAddressSchema,
   openingHours: OpeningHoursSchema.optional().default({}),
   images: PartnerImagesSchema,
-  recommendedBy: RecommendedBySchema,
+  recommendedBy: RecommendedBySchema.optional(),
+  specialOffers: PartnerSpecialOffersSchema.optional(),
   role: z.string().optional().default("member"),
   status: z.enum(["active", "inactive", "pending"]),
   featured: z.boolean(),
