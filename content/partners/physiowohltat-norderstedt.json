@@ -45,24 +45,30 @@
     "note": "Michael und Christian kennen sich persönlich — gemeinsam gründeten sie das MAO-Netzwerk."
   },
   "specialOffers": {
-    "title": "Gutscheine zur Auswahl",
+    "title": "Angebote für MAO Mitglieder",
     "offers": [
       {
         "title": "Ganzkörpermassage 60 Min.",
         "description": "60 Minuten",
         "price": "99 €",
+        "maoPrice": "89,10 €",
+        "maoDiscount": "10%",
         "contactMethods": ["whatsapp", "email"]
       },
       {
         "title": "Premiummassage 90 Min.",
         "description": "90 Minuten",
         "price": "139 €",
+        "maoPrice": "125,10 €",
+        "maoDiscount": "10%",
         "contactMethods": ["whatsapp", "email"]
       },
       {
         "title": "Massage 10er-Karte 60 Min.",
         "description": "10 x 60 Minuten",
-        "price": "790 €",
+        "price": "800 €",
+        "maoPrice": "720 €",
+        "maoDiscount": "10%",
         "contactMethods": ["whatsapp", "email"]
       }
     ]

@@ -36,6 +36,8 @@ export interface SpecialOffer {
   title: string;
   description: string;
   price: string;
+  maoPrice?: string;
+  maoDiscount?: string;
   contactMethods: ('whatsapp' | 'email')[];
 }
 
