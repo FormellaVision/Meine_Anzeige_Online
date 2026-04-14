@@ -31,7 +31,7 @@ export default function PartnerCard({ partner, categoryName, areaName }: Partner
                   src={cloudinaryUrl(partner.images.logo, { width: 112, quality: 85, format: "auto" })}
                   alt={`${partner.name} Logo`}
                   fill
-                  className="object-contain"
+                  className="object-cover"
                   sizes="56px"
                   loading="lazy"
                 />
