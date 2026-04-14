@@ -277,6 +277,14 @@ export default async function PartnerDetailPage({ params }: PartnerDetailPagePro
               </div>
             )}
 
+            {partner.specialOffers && (
+              <SpecialOffers
+                offers={partner.specialOffers}
+                partnerEmail={partner.contact.email}
+                partnerWhatsapp={partner.contact.whatsapp}
+              />
+            )}
+
             {partner.recommendedBy && (
               <div className="rounded-xl border border-brand-gold/40 bg-brand-gold/10 p-5">
                 <h3 className="text-base font-bold text-stone-900 mb-2">Empfohlen von</h3>
@@ -450,15 +458,6 @@ export default async function PartnerDetailPage({ params }: PartnerDetailPagePro
           </aside>
         </div>
       </section>
-
-      {partner.specialOffers && (
-        <SpecialOffers
-          offers={partner.specialOffers}
-          partnerEmail={partner.contact.email}
-          partnerWhatsapp={partner.contact.whatsapp}
-          partnerName={partner.name}
-        />
-      )}
 
       {similarPartners.length > 0 && (
         <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8" aria-label="Ähnliche Partner">
