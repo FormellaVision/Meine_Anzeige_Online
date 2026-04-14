@@ -65,7 +65,7 @@ export default function PartnerLogoSlider() {
       </div>
       <div className="relative mx-auto max-w-5xl overflow-hidden">
         <Carousel
-          opts={{ loop: true }}
+          opts={{ loop: true, dragFree: false }}
           plugins={[AutoScrollPlugin({ playOnInit: true, speed: 1.2, stopOnInteraction: false })]}
         >
           <CarouselContent className="ml-0 items-center">
@@ -78,7 +78,7 @@ export default function PartnerLogoSlider() {
                   href={logo.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mx-8 flex shrink-0 items-center justify-center"
+                  className="pointer-events-auto mx-8 flex shrink-0 items-center justify-center"
                 >
                   <Image
                     src={logo.image}
