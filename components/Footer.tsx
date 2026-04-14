@@ -155,9 +155,9 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="text-center mt-6 pt-6 border-t border-white/10">
-          <p style={{ color: '#6b7280', fontSize: '0.875rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <span style={{ marginRight: '0.5rem', color: '#9ca3af' }}>Erstellt mit</span>
+        <div className="mt-6 pt-6 border-t border-white/10 flex justify-center">
+          <p style={{ color: '#6b7280', fontSize: '0.875rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.25rem' }}>
+            <span style={{ color: '#9ca3af' }}>Erstellt mit</span>
             <a
               href="https://formellavision.de"
               target="_blank"
@@ -182,7 +182,6 @@ export default function Footer() {
               Formella Vision
             </a>
             <span style={{
-              marginLeft: '0.5rem',
               color: '#00D4FF',
             }}>
               ✨
