@@ -1,8 +1,8 @@
 export const NAP = {
   name: "Meine Anzeige Online",
   legalName: "Meine Anzeige Online",
-  street: "",
-  zip: "",
+  street: "Millerntor 1",
+  zip: "20359",
   city: "Hamburg",
   state: "Hamburg",
   country: "DE",
@@ -10,7 +10,7 @@ export const NAP = {
   phone: "+49 173 3878209",
   email: "info@meineanzeige.online",
   website: "https://meineanzeige.online",
-  foundedYear: 2026,
+  foundedYear: 2025,
   description:
     "Hamburgs exklusives Partnernetzwerk für lokale Unternehmen — nur per Empfehlung, persönliches Kennenlernen, echter Mehrwert.",
   priceRange: "€€",
@@ -22,7 +22,7 @@ export const NAP = {
   },
   social: {
     facebook: "",
-    instagram: "",
+    instagram: "https://instagram.com/meineanzeigeonline",
     linkedin: "",
   },
   founders: [
