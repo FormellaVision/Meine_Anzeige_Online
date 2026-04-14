@@ -63,7 +63,7 @@ export default function PartnerLogoSlider() {
           Starke Partner = starkes Netzwerk
         </h2>
       </div>
-      <div className="relative mx-auto max-w-5xl overflow-hidden">
+      <div className="relative mx-auto max-w-5xl overflow-hidden pointer-events-none">
         <Carousel
           opts={{ loop: true, dragFree: false }}
           plugins={[AutoScrollPlugin({ playOnInit: true, speed: 1.2, stopOnInteraction: false })]}
