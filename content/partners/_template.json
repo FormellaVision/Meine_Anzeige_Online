@@ -66,6 +66,17 @@
     "slug": "slug-des-empfehlenden-partners",
     "note": "Optionaler Kommentar zur Empfehlung."
   },
+  "specialOffers": {
+    "title": "Gutscheine zur Auswahl",
+    "offers": [
+      {
+        "title": "Angebot 1",
+        "description": "Beschreibung oder Menge",
+        "price": "99 €",
+        "contactMethods": ["whatsapp", "email"]
+      }
+    ]
+  },
   "role": "member",
   "status": "active",
   "featured": false,

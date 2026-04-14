@@ -44,6 +44,29 @@
     "slug": "formella-vision",
     "note": "Michael und Christian kennen sich persönlich — gemeinsam gründeten sie das MAO-Netzwerk."
   },
+  "specialOffers": {
+    "title": "Gutscheine zur Auswahl",
+    "offers": [
+      {
+        "title": "Ganzkörpermassage 60 Min.",
+        "description": "60 Minuten",
+        "price": "99 €",
+        "contactMethods": ["whatsapp", "email"]
+      },
+      {
+        "title": "Premiummassage 90 Min.",
+        "description": "90 Minuten",
+        "price": "139 €",
+        "contactMethods": ["whatsapp", "email"]
+      },
+      {
+        "title": "Massage 10er-Karte 60 Min.",
+        "description": "10 x 60 Minuten",
+        "price": "790 €",
+        "contactMethods": ["whatsapp", "email"]
+      }
+    ]
+  },
   "role": "founder",
   "status": "active",
   "featured": true,

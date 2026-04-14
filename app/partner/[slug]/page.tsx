@@ -20,7 +20,7 @@ import CategoryIcon from "@/components/CategoryIcon";
 import Badge from "@/components/Badge";
 import PartnerCard from "@/components/PartnerCard";
 import SectionHeading from "@/components/SectionHeading";
-import ContactForm from "@/components/ContactForm";
+import SpecialOffers from "@/components/SpecialOffers";
 
 interface PartnerDetailPageProps {
   params: { slug: string };
@@ -277,6 +277,14 @@ export default async function PartnerDetailPage({ params }: PartnerDetailPagePro
               </div>
             )}
 
+            {partner.specialOffers && (
+              <SpecialOffers
+                offers={partner.specialOffers}
+                partnerEmail={partner.contact.email}
+                partnerWhatsapp={partner.contact.whatsapp}
+              />
+            )}
+
             {partner.recommendedBy && (
               <div className="rounded-xl border border-brand-gold/40 bg-brand-gold/10 p-5">
                 <h3 className="text-base font-bold text-stone-900 mb-2">Empfohlen von</h3>
@@ -448,24 +456,6 @@ export default async function PartnerDetailPage({ params }: PartnerDetailPagePro
               </div>
             )}
           </aside>
-        </div>
-      </section>
-
-      <section className="border-t border-stone-100 bg-stone-50 py-12" aria-label="Kontaktanfrage">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl">
-            <SectionHeading
-              eyebrow="Direkte Anfrage"
-              title={`Kontakt zu ${partner.name}`}
-              subtitle="Schreiben Sie eine Nachricht direkt an den Partner. Er meldet sich so schnell wie möglich bei Ihnen."
-            />
-            <div className="mt-8">
-              <ContactForm
-                partnerName={partner.name}
-                partnerSlug={partner.slug}
-              />
-            </div>
-          </div>
         </div>
       </section>
 

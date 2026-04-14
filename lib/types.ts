@@ -32,6 +32,18 @@ export interface RecommendedBy {
   note?: string;
 }
 
+export interface SpecialOffer {
+  title: string;
+  description: string;
+  price: string;
+  contactMethods: ('whatsapp' | 'email')[];
+}
+
+export interface PartnerSpecialOffers {
+  title: string;
+  offers: SpecialOffer[];
+}
+
 export interface OpeningHours {
   monday?: string;
   tuesday?: string;
@@ -58,6 +70,7 @@ export interface Partner {
   openingHours: OpeningHours;
   images: PartnerImages;
   recommendedBy?: RecommendedBy;
+  specialOffers?: PartnerSpecialOffers;
   role: string;
   status: 'active' | 'inactive' | 'pending';
   featured: boolean;
