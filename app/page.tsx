@@ -117,7 +117,7 @@ export default async function HomePage() {
             src="https://res.cloudinary.com/dqkld61zu/image/upload/v1773515164/Foto_Hamburg_2_tfcf0o.webp"
             alt="Hamburg Stadtansicht"
             fill
-            className="object-cover"
+            className="object-cover md:object-center object-left"
             priority
             sizes="100vw"
             style={{ opacity: 0.35 }}
