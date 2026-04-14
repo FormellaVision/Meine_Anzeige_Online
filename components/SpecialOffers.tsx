@@ -13,7 +13,7 @@ interface OfferWithMAO {
   price: string;
   maoPrice?: string;
   maoDiscount?: string;
-  contactMethods: string[];
+  contactMethods: ('whatsapp' | 'email')[];
 }
 
 export default function SpecialOffers({
@@ -27,8 +27,9 @@ export default function SpecialOffers({
         <h2 className="text-xl font-bold text-stone-900 mb-4">{offers.title}</h2>
         <div className="space-y-4">
           {offers.offers.map((offer, i) => {
-            const offerWithMAO = offer as OfferWithMAO;
-            const hasMaoOffer = offerWithMAO.maoPrice && offerWithMAO.maoDiscount;
+            const maoPrice = (offer as any).maoPrice;
+            const maoDiscount = (offer as any).maoDiscount;
+            const hasMaoOffer = !!maoPrice && !!maoDiscount;
 
             return (
               <div
@@ -54,7 +55,7 @@ export default function SpecialOffers({
                         <div className="inline-flex items-center gap-2 rounded-full bg-green-100 px-3 py-1">
                           <Tag size={14} className="text-green-700" />
                           <span className="text-sm font-bold text-green-700">
-                            -{offerWithMAO.maoDiscount}
+                            -{maoDiscount}
                           </span>
                         </div>
                         <div className="flex items-baseline gap-2">
@@ -62,7 +63,7 @@ export default function SpecialOffers({
                             {offer.price}
                           </p>
                           <p className="text-2xl font-bold text-green-600">
-                            {offerWithMAO.maoPrice}
+                            {maoPrice}
                           </p>
                         </div>
                       </div>
