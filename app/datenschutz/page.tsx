@@ -101,10 +101,11 @@ export default function DatenschutzPage() {
           </div>
 
           <div>
-            <h2 className="mb-4 text-xl font-bold text-stone-900">3. Kontaktformulare (Netlify)</h2>
+            <h2 className="mb-4 text-xl font-bold text-stone-900">3. Kontaktformulare (Resend)</h2>
             <p className="mb-4">
               Unsere Website verwendet Kontakt- und Bewerbungsformulare. Die Daten aus diesen
-              Formularen werden über Netlify Forms verarbeitet und gespeichert.
+              Formularen werden an unseren Email-Dienst Resend übermittelt, um Ihnen eine E-Mail-Bestätigung
+              zu senden.
             </p>
             <p className="mb-4">
               Folgende Daten können je nach Formular erhoben werden:
@@ -125,16 +126,16 @@ export default function DatenschutzPage() {
               ))}
             </ul>
             <p className="mt-4 text-stone-600">
-              Die Übermittlung erfolgt verschlüsselt. Netlify speichert Formulardaten auf Servern
-              innerhalb der EU und der USA. Eine Datenübertragung in die USA erfolgt auf Grundlage
-              der EU-Standardvertragsklauseln. Weitere Informationen finden Sie in der{" "}
+              Die Übermittlung erfolgt verschlüsselt über sichere API-Verbindungen. Resend verarbeitet
+              E-Mail-Daten auf Servern innerhalb der EU und der USA gemäß EU-Standardvertragsklauseln.
+              Weitere Informationen finden Sie in der{" "}
               <a
-                href="https://www.netlify.com/privacy/"
+                href="https://resend.com/privacy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-brand-blue hover:underline underline-offset-2"
               >
-                Datenschutzerklärung von Netlify
+                Datenschutzerklärung von Resend
               </a>
               .
             </p>

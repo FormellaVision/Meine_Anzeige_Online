@@ -12,8 +12,21 @@ function getConfig(): { resend: Resend; from: string; to: string } {
   return { resend: new Resend(key), from, to };
 }
 
+function escapeHtml(text: string): string {
+  const map: Record<string, string> = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#039;",
+  };
+  return text.replace(/[&<>"']/g, (char) => map[char]);
+}
+
 function row(label: string, value: string): string {
-  return `<tr><td style="padding:4px 8px;color:#6b7280;font-size:13px;white-space:nowrap">${label}</td><td style="padding:4px 8px;font-size:13px">${value}</td></tr>`;
+  const escapedLabel = escapeHtml(label);
+  const escapedValue = escapeHtml(value);
+  return `<tr><td style="padding:4px 8px;color:#6b7280;font-size:13px;white-space:nowrap">${escapedLabel}</td><td style="padding:4px 8px;font-size:13px">${escapedValue}</td></tr>`;
 }
 
 function table(rows: string): string {
@@ -21,9 +34,10 @@ function table(rows: string): string {
 }
 
 function wrap(title: string, body: string): string {
+  const escapedTitle = escapeHtml(title);
   return `<!DOCTYPE html><html><body style="font-family:sans-serif;background:#f9fafb;padding:32px">
   <div style="max-width:600px;margin:0 auto;background:#fff;border-radius:12px;padding:32px;border:1px solid #e5e7eb">
-    <h2 style="margin:0 0 16px;font-size:18px;color:#111827">${title}</h2>
+    <h2 style="margin:0 0 16px;font-size:18px;color:#111827">${escapedTitle}</h2>
     ${body}
   </div></body></html>`;
 }
@@ -72,15 +86,16 @@ export async function sendContactMail(data: ContactPayload): Promise<void> {
     ? `Neue Anfrage an ${data.partnerName}`
     : "Neue Kontaktanfrage";
 
+  const escapedMessage = escapeHtml(data.message);
   const html = wrap(
     subject,
     table(
       row("Name", data.name) +
-      row("E-Mail", `<a href="mailto:${data.email}">${data.email}</a>`) +
+      row("E-Mail", `<a href="mailto:${escapeHtml(data.email)}">${escapeHtml(data.email)}</a>`) +
       (data.phone ? row("Telefon", data.phone) : "") +
       (data.partnerName ? row("Partner", data.partnerName) : "") +
       row("Weiterempfohlen von", data.recommendedBy) +
-      `</table><p style="margin-top:20px;font-size:14px;color:#374151"><strong>Nachricht:</strong></p><p style="font-size:14px;color:#374151;white-space:pre-wrap">${data.message}</p><table>`
+      `</table><p style="margin-top:20px;font-size:14px;color:#374151"><strong>Nachricht:</strong></p><p style="font-size:14px;color:#374151;white-space:pre-wrap">${escapedMessage}</p><table>`
     )
   );
 
@@ -90,15 +105,16 @@ export async function sendContactMail(data: ContactPayload): Promise<void> {
 export async function sendGeneralContactMail(data: GeneralContactPayload): Promise<void> {
   const subject = `Kontakt: ${data.subject}`;
 
+  const escapedMessage = escapeHtml(data.message);
   const html = wrap(
     subject,
     table(
       row("Name", data.name) +
-      row("E-Mail", `<a href="mailto:${data.email}">${data.email}</a>`) +
+      row("E-Mail", `<a href="mailto:${escapeHtml(data.email)}">${escapeHtml(data.email)}</a>`) +
       (data.phone ? row("Telefon", data.phone) : "") +
       row("Betreff", data.subject) +
       row("Weiterempfohlen von", data.recommendedBy) +
-      `</table><p style="margin-top:20px;font-size:14px;color:#374151"><strong>Nachricht:</strong></p><p style="font-size:14px;color:#374151;white-space:pre-wrap">${data.message}</p><table>`
+      `</table><p style="margin-top:20px;font-size:14px;color:#374151"><strong>Nachricht:</strong></p><p style="font-size:14px;color:#374151;white-space:pre-wrap">${escapedMessage}</p><table>`
     )
   );
 
@@ -108,18 +124,20 @@ export async function sendGeneralContactMail(data: GeneralContactPayload): Promi
 export async function sendPartnerApplyMail(data: PartnerApplyPayload): Promise<void> {
   const subject = `Neue Partner-Bewerbung: ${data.companyName}`;
 
+  const escapedPitch = escapeHtml(data.shortPitch);
+  const escapedWebsite = escapeHtml(data.website);
   const html = wrap(
     subject,
     table(
       row("Unternehmen", data.companyName) +
       row("Ansprechperson", data.contactName) +
-      row("E-Mail", `<a href="mailto:${data.email}">${data.email}</a>`) +
+      row("E-Mail", `<a href="mailto:${escapeHtml(data.email)}">${escapeHtml(data.email)}</a>`) +
       (data.phone ? row("Telefon", data.phone) : "") +
-      row("Website", `<a href="${data.website}">${data.website}</a>`) +
+      row("Website", `<a href="${escapedWebsite}">${escapedWebsite}</a>`) +
       row("Kategorie", data.categorySlug) +
       row("Bezirk", data.areaSlug) +
       row("Weiterempfohlen von", data.referredBy) +
-      `</table><p style="margin-top:20px;font-size:14px;color:#374151"><strong>Kurzbeschreibung:</strong></p><p style="font-size:14px;color:#374151;white-space:pre-wrap">${data.shortPitch}</p><table>`
+      `</table><p style="margin-top:20px;font-size:14px;color:#374151"><strong>Kurzbeschreibung:</strong></p><p style="font-size:14px;color:#374151;white-space:pre-wrap">${escapedPitch}</p><table>`
     )
   );
 

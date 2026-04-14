@@ -249,7 +249,7 @@ export function buildEventSchema(event: MAOEvent) {
     startDate: event.dateStart,
     endDate: event.dateEnd,
     eventStatus: isPast
-      ? "https://schema.org/EventScheduled"
+      ? "https://schema.org/EventCancelled"
       : "https://schema.org/EventScheduled",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     location: {
