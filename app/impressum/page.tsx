@@ -104,7 +104,7 @@ export default function ImpressumPage() {
               Umsatzsteuer-Identifikationsnummer
             </h2>
             <div className="rounded-xl bg-brand-cream p-6">
-              <p className="text-stone-500 italic">Wird ergänzt, sobald vorhanden.</p>
+              <p>USt-IdNr.: Kleinunternehmer gem. § 19 UStG</p>
             </div>
           </div>
 
