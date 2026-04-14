@@ -122,7 +122,7 @@ export default async function PartnerDetailPage({ params }: PartnerDetailPagePro
                     src={cloudinaryUrl(partner.images.logo, { width: 224, quality: 90, format: "auto" })}
                     alt={`${partner.name} Logo`}
                     fill
-                    className="object-contain p-2"
+                    className="object-cover"
                     sizes="(max-width: 640px) 96px, 112px"
                     priority
                   />
