@@ -60,7 +60,7 @@ export default function PartnerLogoSlider() {
       <div className="container flex flex-col items-center text-center mb-8">
         <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-2">Unsere Partner</p>
         <h2 className="text-2xl font-bold text-stone-800">
-          Starke Partner — starkes Netzwerk
+          Starke Partner = starkes Netzwerk
         </h2>
       </div>
       <div className="relative mx-auto max-w-5xl overflow-hidden">
