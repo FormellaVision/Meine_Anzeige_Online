@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { MapPin, ExternalLink } from "lucide-react";
+import { useState, useEffect } from "react";
+import { MapPin } from "lucide-react";
 
 interface MapEmbedProps {
   googleMapsUrl: string;
@@ -9,7 +9,22 @@ interface MapEmbedProps {
 }
 
 export default function MapEmbed({ googleMapsUrl, name }: MapEmbedProps) {
+  const [showMap, setShowMap] = useState(false);
   const [consentError, setConsentError] = useState(false);
+
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem("mao_consent");
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (parsed.external_media === true) {
+          setShowMap(true);
+          setConsentError(false);
+        }
+      }
+    } catch {
+    }
+  }, []);
 
   const handleShowMap = () => {
     try {
@@ -17,7 +32,7 @@ export default function MapEmbed({ googleMapsUrl, name }: MapEmbedProps) {
       if (raw) {
         const parsed = JSON.parse(raw);
         if (parsed.external_media === true) {
-          window.open(googleMapsUrl, "_blank", "noopener,noreferrer");
+          setShowMap(true);
           setConsentError(false);
           return;
         }
@@ -26,6 +41,22 @@ export default function MapEmbed({ googleMapsUrl, name }: MapEmbedProps) {
     }
     setConsentError(true);
   };
+
+  if (showMap) {
+    return (
+      <div className="rounded-xl border border-stone-200 overflow-hidden">
+        <iframe
+          src={googleMapsUrl}
+          width="100%"
+          height="450"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
+      </div>
+    );
+  }
 
   return (
     <div className="rounded-xl border border-stone-200 bg-stone-50 overflow-hidden">
@@ -36,7 +67,7 @@ export default function MapEmbed({ googleMapsUrl, name }: MapEmbedProps) {
         <div className="space-y-1">
           <p className="text-sm font-semibold text-stone-800">{name}</p>
           <p className="text-xs text-stone-500">
-            Kartenansicht bei Google Maps öffnen
+            Karte anzeigen nach Cookie-Zustimmung
           </p>
         </div>
         <button
@@ -44,7 +75,6 @@ export default function MapEmbed({ googleMapsUrl, name }: MapEmbedProps) {
           onClick={handleShowMap}
           className="inline-flex items-center gap-2 rounded-full bg-brand-blue px-5 py-2.5 text-sm font-medium text-white transition-all duration-200 hover:bg-brand-blue-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2"
         >
-          <ExternalLink size={14} />
           Karte anzeigen
         </button>
         {consentError && (
