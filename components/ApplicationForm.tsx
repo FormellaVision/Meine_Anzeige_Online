@@ -11,6 +11,9 @@ interface ApplicationFormProps {
   areas: Area[];
 }
 
+const OTHER_CATEGORY = "other";
+const OTHER_AREA = "other";
+
 function isValidRecommendedBy(val: string): boolean {
   const trimmed = val.trim();
   return trimmed.toLowerCase() === "nein" || trimmed.length >= 2;
@@ -24,6 +27,10 @@ export default function ApplicationForm({ categories, areas }: ApplicationFormPr
   const [previewMode, setPreviewMode] = useState(false);
   const [referredBy, setReferredBy] = useState("");
   const [referredByError, setReferredByError] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [customCategory, setCustomCategory] = useState("");
+  const [selectedArea, setSelectedArea] = useState("");
+  const [customArea, setCustomArea] = useState("");
 
   const inputClass = cn(
     "w-full rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm text-stone-900",
@@ -61,6 +68,9 @@ export default function ApplicationForm({ categories, areas }: ApplicationFormPr
 
     try {
       const formData = new FormData(formEl);
+      const categorySlug = selectedCategory === OTHER_CATEGORY ? customCategory : selectedCategory;
+      const areaSlug = selectedArea === OTHER_AREA ? customArea : selectedArea;
+
       const response = await fetch("/api/forms/partner-apply", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -68,10 +78,10 @@ export default function ApplicationForm({ categories, areas }: ApplicationFormPr
           companyName: formData.get("companyName"),
           contactName: formData.get("contactName"),
           email: formData.get("email"),
-          phone: formData.get("phone") || undefined,
+          phone: formData.get("phone"),
           website: formData.get("website"),
-          categorySlug: formData.get("categorySlug"),
-          areaSlug: formData.get("areaSlug"),
+          categorySlug,
+          areaSlug,
           shortPitch: formData.get("shortPitch"),
           referredBy,
         }),
@@ -198,13 +208,13 @@ export default function ApplicationForm({ categories, areas }: ApplicationFormPr
         </div>
         <div>
           <label htmlFor="app-phone" className={labelClass}>
-            Telefon{" "}
-            <span className="text-xs font-normal text-stone-400">(optional)</span>
+            Telefon <span className="text-brand-blue">*</span>
           </label>
           <input
             id="app-phone"
             type="tel"
             name="phone"
+            required
             autoComplete="tel"
             placeholder="+49 40 123456"
             className={inputClass}
@@ -237,40 +247,64 @@ export default function ApplicationForm({ categories, areas }: ApplicationFormPr
               id="app-categorySlug"
               name="categorySlug"
               required
-              defaultValue=""
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
               className={cn(inputClass, "appearance-none cursor-pointer pr-9")}
             >
               <option value="" disabled>Bitte wählen …</option>
               {categories.map((cat) => (
                 <option key={cat.slug} value={cat.slug}>{cat.name}</option>
               ))}
+              <option value={OTHER_CATEGORY}>Anderes</option>
             </select>
             <svg className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-stone-400" width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
+          {selectedCategory === OTHER_CATEGORY && (
+            <input
+              type="text"
+              value={customCategory}
+              onChange={(e) => setCustomCategory(e.target.value)}
+              placeholder="Bitte eintragen …"
+              className={cn(inputClass, "mt-3")}
+              required={selectedCategory === OTHER_CATEGORY}
+            />
+          )}
         </div>
         <div>
           <label htmlFor="app-areaSlug" className={labelClass}>
-            Hamburger Bezirk <span className="text-brand-blue">*</span>
+            Firmensitz <span className="text-brand-blue">*</span>
           </label>
           <div className="relative">
             <select
               id="app-areaSlug"
               name="areaSlug"
               required
-              defaultValue=""
+              value={selectedArea}
+              onChange={(e) => setSelectedArea(e.target.value)}
               className={cn(inputClass, "appearance-none cursor-pointer pr-9")}
             >
               <option value="" disabled>Bitte wählen …</option>
               {areas.map((area) => (
                 <option key={area.slug} value={area.slug}>{area.name}</option>
               ))}
+              <option value={OTHER_AREA}>Anderes</option>
             </select>
             <svg className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-stone-400" width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
+          {selectedArea === OTHER_AREA && (
+            <input
+              type="text"
+              value={customArea}
+              onChange={(e) => setCustomArea(e.target.value)}
+              placeholder="Bitte eintragen …"
+              className={cn(inputClass, "mt-3")}
+              required={selectedArea === OTHER_AREA}
+            />
+          )}
         </div>
       </div>
 
