@@ -42,16 +42,23 @@ export default function PartnerDirectory({ partners, categories, areas }: Partne
     if (debouncedQ.trim() !== "") {
       const query = debouncedQ.trim().toLowerCase();
       result = result.filter(
-        (p) =>
-          p.name.toLowerCase().includes(query) ||
-          p.shortDescription.toLowerCase().includes(query) ||
-          (p.tags ?? []).some((tag) => tag.toLowerCase().includes(query)) ||
-          (categoryMap.get(p.categorySlug) ?? "").toLowerCase().includes(query) ||
-          (areaMap.get(p.areaSlug) ?? "").toLowerCase().includes(query)
+        (p) => {
+          const catSlug = Array.isArray(p.categorySlug) ? p.categorySlug[0] : p.categorySlug;
+          return (
+            p.name.toLowerCase().includes(query) ||
+            p.shortDescription.toLowerCase().includes(query) ||
+            (p.tags ?? []).some((tag) => tag.toLowerCase().includes(query)) ||
+            (categoryMap.get(catSlug) ?? "").toLowerCase().includes(query) ||
+            (areaMap.get(p.areaSlug) ?? "").toLowerCase().includes(query)
+          );
+        }
       );
     }
     if (cat !== "") {
-      result = result.filter((p) => p.categorySlug === cat);
+      result = result.filter((p) => {
+        const catSlugs = Array.isArray(p.categorySlug) ? p.categorySlug : [p.categorySlug];
+        return catSlugs.includes(cat);
+      });
     }
     if (area !== "") {
       result = result.filter((p) => p.areaSlug === area);
@@ -251,14 +258,17 @@ export default function PartnerDirectory({ partners, categories, areas }: Partne
         </div>
       ) : (
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {filtered.map((partner) => (
-            <PartnerCard
-              key={partner.slug}
-              partner={partner}
-              categoryName={categoryMap.get(partner.categorySlug)}
-              areaName={areaMap.get(partner.areaSlug)}
-            />
-          ))}
+          {filtered.map((partner) => {
+            const catSlug = Array.isArray(partner.categorySlug) ? partner.categorySlug[0] : partner.categorySlug;
+            return (
+              <PartnerCard
+                key={partner.slug}
+                partner={partner}
+                categoryName={categoryMap.get(catSlug)}
+                areaName={areaMap.get(partner.areaSlug)}
+              />
+            );
+          })}
         </div>
       )}
 

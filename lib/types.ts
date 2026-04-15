@@ -59,7 +59,7 @@ export interface OpeningHours {
 export interface Partner {
   name: string;
   slug: string;
-  categorySlug: string;
+  categorySlug: string | string[];
   tags: string[];
   areaSlug: string;
   shortDescription: string;

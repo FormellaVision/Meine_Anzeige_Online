@@ -51,6 +51,8 @@ export const SpecialOfferSchema = z.object({
   title: z.string().min(1, "title is required"),
   description: z.string(),
   price: z.string(),
+  maoPrice: z.string().optional(),
+  maoDiscount: z.string().optional(),
   contactMethods: z.array(z.enum(["whatsapp", "email"])).optional().default([]),
 });
 
@@ -62,7 +64,7 @@ export const PartnerSpecialOffersSchema = z.object({
 export const PartnerSchema = z.object({
   name: z.string().min(1, "name is required"),
   slug: z.string().regex(/^[a-z0-9-]+$/, "slug must be lowercase letters, numbers, and hyphens only"),
-  categorySlug: z.string().min(1, "categorySlug is required"),
+  categorySlug: z.union([z.string().min(1, "categorySlug is required"), z.array(z.string().min(1)).min(1, "categorySlug array must have at least one element")]),
   tags: z.array(z.string()).optional().default([]),
   areaSlug: z.string().min(1, "areaSlug is required"),
   shortDescription: z.string().min(1, "shortDescription is required"),

@@ -188,7 +188,7 @@ export default function SearchDrawer({ partners }: SearchDrawerProps) {
                     className="flex items-center gap-3 px-5 py-3.5 transition-colors hover:bg-brand-cream/40 focus:outline-none focus-visible:bg-brand-cream/40"
                   >
                     <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-brand-cream text-brand-blue">
-                      <CategoryIcon slug={partner.categorySlug} size={18} />
+                      <CategoryIcon slug={Array.isArray(partner.categorySlug) ? partner.categorySlug[0] : partner.categorySlug} size={18} />
                     </div>
 
                     <div className="min-w-0 flex-1">
@@ -198,7 +198,7 @@ export default function SearchDrawer({ partners }: SearchDrawerProps) {
                       <div className="mt-0.5 flex items-center gap-2 text-xs text-gray-500">
                         <span className="flex items-center gap-1 truncate">
                           <Tag size={10} className="flex-shrink-0" />
-                          <span className="truncate">{partner.categorySlug.replace(/-/g, " ")}</span>
+                          <span className="truncate">{(Array.isArray(partner.categorySlug) ? partner.categorySlug[0] : partner.categorySlug).replace(/-/g, " ")}</span>
                         </span>
                         <span className="flex-shrink-0 text-gray-300">·</span>
                         <span className="flex items-center gap-1 truncate">

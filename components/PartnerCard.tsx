@@ -39,7 +39,7 @@ export default function PartnerCard({ partner, categoryName, areaName }: Partner
             ) : (
               <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-brand-blue/8 border border-brand-blue/10">
                 <CategoryIcon
-                  slug={partner.categorySlug}
+                  slug={Array.isArray(partner.categorySlug) ? partner.categorySlug[0] : partner.categorySlug}
                   size={26}
                   className="text-brand-blue"
                 />

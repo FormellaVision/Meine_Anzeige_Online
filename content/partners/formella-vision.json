@@ -1,7 +1,7 @@
 {
   "name": "Formella Vision",
   "slug": "formella-vision",
-  "categorySlug": "marketing-werbung",
+  "categorySlug": ["webdesign-digitales", "marketing-werbung"],
   "tags": ["webdesign", "website", "seo", "digitales marketing", "hamburg", "branding"],
   "areaSlug": "hamburg-mitte",
   "shortDescription": "Professionelle Webseiten für Hamburger Unternehmen — klar, schnell und konversionsstark.",

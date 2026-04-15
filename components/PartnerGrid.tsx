@@ -34,14 +34,17 @@ export default function PartnerGrid({
 
   return (
     <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-      {partners.map((partner) => (
-        <PartnerCard
-          key={partner.slug}
-          partner={partner}
-          categoryName={categoryMap.get(partner.categorySlug)}
-          areaName={areaMap.get(partner.areaSlug)}
-        />
-      ))}
+      {partners.map((partner) => {
+        const catSlug = Array.isArray(partner.categorySlug) ? partner.categorySlug[0] : partner.categorySlug;
+        return (
+          <PartnerCard
+            key={partner.slug}
+            partner={partner}
+            categoryName={categoryMap.get(catSlug)}
+            areaName={areaMap.get(partner.areaSlug)}
+          />
+        );
+      })}
     </div>
   );
 }

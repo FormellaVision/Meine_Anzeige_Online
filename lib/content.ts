@@ -48,7 +48,12 @@ export function getPartnerBySlug(slug: string): Partner | null {
 }
 
 export function getPartnersByCategory(categorySlug: string): Partner[] {
-  return getAllPartners().filter((p) => p.categorySlug === categorySlug);
+  return getAllPartners().filter((p) => {
+    if (Array.isArray(p.categorySlug)) {
+      return p.categorySlug.includes(categorySlug);
+    }
+    return p.categorySlug === categorySlug;
+  });
 }
 
 export function getPartnersByArea(areaSlug: string): Partner[] {
@@ -60,12 +65,22 @@ export function getFeaturedPartners(): Partner[] {
 }
 
 export function getSimilarPartners(partner: Partner, limit = 3): Partner[] {
+  const partnerCats = Array.isArray(partner.categorySlug) ? partner.categorySlug : [partner.categorySlug];
   const all = getAllPartners().filter((p) => p.slug !== partner.slug);
-  const sameCatAndArea = all.filter(
-    (p) => p.categorySlug === partner.categorySlug && p.areaSlug === partner.areaSlug
-  );
+
+  const sameCatAndArea = all.filter((p) => {
+    const pCats = Array.isArray(p.categorySlug) ? p.categorySlug : [p.categorySlug];
+    const hasSameCategory = pCats.some(cat => partnerCats.includes(cat));
+    return hasSameCategory && p.areaSlug === partner.areaSlug;
+  });
+
   if (sameCatAndArea.length >= limit) return sameCatAndArea.slice(0, limit);
-  const sameCat = all.filter((p) => p.categorySlug === partner.categorySlug);
+
+  const sameCat = all.filter((p) => {
+    const pCats = Array.isArray(p.categorySlug) ? p.categorySlug : [p.categorySlug];
+    return pCats.some(cat => partnerCats.includes(cat));
+  });
+
   const merged = [...sameCatAndArea];
   for (const p of sameCat) {
     if (merged.length >= limit) break;

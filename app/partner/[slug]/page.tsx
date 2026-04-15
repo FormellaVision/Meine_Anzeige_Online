@@ -51,7 +51,9 @@ export default async function PartnerDetailPage({ params }: PartnerDetailPagePro
   const partner = getPartnerBySlug(params.slug);
   if (!partner) notFound();
 
-  const category = getCategoryBySlug(partner.categorySlug);
+  const category = Array.isArray(partner.categorySlug)
+    ? getCategoryBySlug(partner.categorySlug[0])
+    : getCategoryBySlug(partner.categorySlug);
   const area = getAreaBySlug(partner.areaSlug);
   const similarPartners = getSimilarPartners(partner, 3);
 
@@ -130,7 +132,7 @@ export default async function PartnerDetailPage({ params }: PartnerDetailPagePro
               ) : (
                 <div className="flex h-24 w-24 items-center justify-center rounded-2xl border border-brand-blue/15 bg-brand-blue/8 sm:h-28 sm:w-28">
                   <CategoryIcon
-                    slug={partner.categorySlug}
+                    slug={Array.isArray(partner.categorySlug) ? partner.categorySlug[0] : partner.categorySlug}
                     size={40}
                     className="text-brand-blue"
                   />
@@ -140,15 +142,29 @@ export default async function PartnerDetailPage({ params }: PartnerDetailPagePro
 
             <div className="flex-1 min-w-0">
               <div className="flex flex-wrap items-center gap-2 mb-3">
-                {category && (
-                  <Link
-                    href={`/kategorie/${partner.categorySlug}`}
-                    className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue rounded-full"
-                    aria-label={`Alle Partner in der Kategorie ${category.name}`}
-                  >
-                    <Badge variant="category" label={category.name} />
-                  </Link>
-                )}
+                {Array.isArray(partner.categorySlug)
+                  ? partner.categorySlug.map((slug) => {
+                      const cat = getCategoryBySlug(slug);
+                      return cat ? (
+                        <Link
+                          key={slug}
+                          href={`/kategorie/${slug}`}
+                          className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue rounded-full"
+                          aria-label={`Alle Partner in der Kategorie ${cat.name}`}
+                        >
+                          <Badge variant="category" label={cat.name} />
+                        </Link>
+                      ) : null;
+                    })
+                  : category && (
+                      <Link
+                        href={`/kategorie/${partner.categorySlug}`}
+                        className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue rounded-full"
+                        aria-label={`Alle Partner in der Kategorie ${category.name}`}
+                      >
+                        <Badge variant="category" label={category.name} />
+                      </Link>
+                    )}
                 {area && (
                   <Link
                     href={`/bezirk/${partner.areaSlug}`}
@@ -429,10 +445,10 @@ export default async function PartnerDetailPage({ params }: PartnerDetailPagePro
                 <div className="space-y-1">
                   {category && (
                     <Link
-                      href={`/kategorie/${partner.categorySlug}`}
+                      href={`/kategorie/${Array.isArray(partner.categorySlug) ? partner.categorySlug[0] : partner.categorySlug}`}
                       className="flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm font-medium text-stone-700 transition-colors hover:bg-brand-blue/5 hover:text-brand-blue focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
                     >
-                      <CategoryIcon slug={partner.categorySlug} size={14} className="shrink-0 text-brand-blue" />
+                      <CategoryIcon slug={Array.isArray(partner.categorySlug) ? partner.categorySlug[0] : partner.categorySlug} size={14} className="shrink-0 text-brand-blue" />
                       Alle {category.name}-Partner
                     </Link>
                   )}
@@ -468,7 +484,7 @@ export default async function PartnerDetailPage({ params }: PartnerDetailPagePro
           />
           <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {similarPartners.map((p) => {
-              const pCategory = getCategoryBySlug(p.categorySlug);
+              const pCategory = getCategoryBySlug(Array.isArray(p.categorySlug) ? p.categorySlug[0] : p.categorySlug);
               const pArea = getAreaBySlug(p.areaSlug);
               return (
                 <PartnerCard
