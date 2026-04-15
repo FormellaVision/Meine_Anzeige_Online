@@ -9,7 +9,7 @@ export function buildMetadata(params: {
   ogImage?: string;
 }): Metadata {
   const url = `${SITE_URL}${params.path}`;
-  const ogImage = params.ogImage ?? "/og-default.jpg";
+  const ogImage = params.ogImage ?? "https://res.cloudinary.com/dqkld61zu/image/upload/v1773515164/Foto_Hamburg_2_tfcf0o.webp";
   return {
     title: `${params.title} | Meine Anzeige Online`,
     description: params.description,
