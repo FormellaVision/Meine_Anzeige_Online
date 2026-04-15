@@ -58,6 +58,43 @@
     "slug": "physiowohltat-norderstedt",
     "note": "Gründungsmitglied — Michael Wolfsohn bringt sein Auge fürs Detail auch vor die Kamera."
   },
+  "specialOffers": {
+    "title": "Angebote für MAO Mitglieder",
+    "offers": [
+      {
+        "title": "Studioaufnahme Portrait oder Bewerbungsfoto",
+        "description": "1 Aufnahme",
+        "price": "150 €",
+        "maoPrice": "135 €",
+        "maoDiscount": "10%",
+        "contactMethods": ["whatsapp", "email"]
+      },
+      {
+        "title": "Hochzeitsfotografie",
+        "description": "1 Aufnahme",
+        "price": "100 €",
+        "maoPrice": "90 €",
+        "maoDiscount": "10%",
+        "contactMethods": ["whatsapp", "email"]
+      },
+      {
+        "title": "Hochzeitsvideo ein Kameraman",
+        "description": "1 Aufnahme",
+        "price": "150 €",
+        "maoPrice": "135 €",
+        "maoDiscount": "10%",
+        "contactMethods": ["whatsapp", "email"]
+      },
+      {
+        "title": "Hochzeitsvideo zwei Kameramänner",
+        "description": "1 Aufnahme",
+        "price": "200 €",
+        "maoPrice": "180 €",
+        "maoDiscount": "10%",
+        "contactMethods": ["whatsapp", "email"]
+      }
+    ]
+  },
   "role": "founder",
   "status": "active",
   "featured": true,
