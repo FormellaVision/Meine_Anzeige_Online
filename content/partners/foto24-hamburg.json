@@ -63,7 +63,7 @@
     "offers": [
       {
         "title": "Studioaufnahme Portrait oder Bewerbungsfoto",
-        "description": "1 Aufnahme",
+        "description": "1 Stunde",
         "price": "150 €",
         "maoPrice": "135 €",
         "maoDiscount": "10%",
@@ -71,7 +71,7 @@
       },
       {
         "title": "Hochzeitsfotografie",
-        "description": "1 Aufnahme",
+        "description": "1 Stunde",
         "price": "100 €",
         "maoPrice": "90 €",
         "maoDiscount": "10%",
@@ -79,7 +79,7 @@
       },
       {
         "title": "Hochzeitsvideo ein Kameraman",
-        "description": "1 Aufnahme",
+        "description": "1 Stunde",
         "price": "150 €",
         "maoPrice": "135 €",
         "maoDiscount": "10%",
@@ -87,7 +87,7 @@
       },
       {
         "title": "Hochzeitsvideo zwei Kameramänner",
-        "description": "1 Aufnahme",
+        "description": "1 Stunde",
         "price": "200 €",
         "maoPrice": "180 €",
         "maoDiscount": "10%",
