@@ -24,29 +24,29 @@
   ],
   "contact": {
     "contactName": "Michael Wolfsohn",
-    "phone": "+49 176 72755964",
-    "email": "physiowohltat@gmx.de",
+    "phone": "+49 172 9012272",
+    "email": "foto24.hamburg@gmx.de",
     "website": "https://foto24.hamburg",
-    "whatsapp": "https://wa.me/491767275596"
+    "whatsapp": "https://wa.me/491729012272"
   },
   "social": {
     "facebook": "",
     "instagram": ""
   },
   "address": {
-    "street": "",
-    "zip": "",
-    "city": "Hamburg",
-    "googleMapsUrl": "https://www.google.com/maps/search/foto24+hamburg"
+    "street": "Ochsenzoller Str. 96",
+    "zip": "22848",
+    "city": "Norderstedt",
+    "googleMapsUrl": "https://www.google.com/maps/search/Ochsenzoller+Str.+96,+22848+Norderstedt"
   },
   "openingHours": {
-    "monday": "Auf Anfrage",
-    "tuesday": "Auf Anfrage",
-    "wednesday": "Auf Anfrage",
-    "thursday": "Auf Anfrage",
-    "friday": "Auf Anfrage",
-    "saturday": "Auf Anfrage",
-    "sunday": "Auf Anfrage"
+    "monday": "09:00–17:00",
+    "tuesday": "09:00–17:00",
+    "wednesday": "09:00–17:00",
+    "thursday": "09:00–17:00",
+    "friday": "09:00–17:00",
+    "saturday": "09:00–17:00",
+    "sunday": "09:00–17:00"
   },
   "images": {
     "logo": "https://res.cloudinary.com/dqkld61zu/image/upload/v1773516818/Michael_Wolfsohn_Foto24-Hamburg_q7nvyc.webp",
