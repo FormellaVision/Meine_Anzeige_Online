@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Shield, CircleCheck as CheckCircle, Users, Heart, Star, Award, MapPin } from "lucide-react";
-import { buildMetadata } from "@/lib/seo";
-import { NAP } from "@/lib/constants";
+import { buildMetadata, buildBreadcrumbSchema } from "@/lib/seo";
+import { NAP, SITE_URL } from "@/lib/constants";
 import SectionHeading from "@/components/SectionHeading";
 import CTABlock from "@/components/CTABlock";
 import FounderSection from "@/components/FounderSection";
@@ -67,8 +67,17 @@ const rules = [
 ];
 
 export default function UeberPage() {
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Startseite", url: SITE_URL },
+    { name: "Über uns", url: `${SITE_URL}/ueber` },
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <section className="bg-brand-cream pt-28 pb-16 px-4" aria-label="Seiteneinführung">
         <div className="mx-auto max-w-4xl text-center">
           <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-brand-blue">

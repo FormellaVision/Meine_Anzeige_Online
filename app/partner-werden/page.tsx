@@ -6,7 +6,8 @@ import {
   Coffee,
   Shield,
 } from "lucide-react";
-import { buildMetadata, buildFAQSchema } from "@/lib/seo";
+import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema } from "@/lib/seo";
+import { SITE_URL } from "@/lib/constants";
 import SectionHeading from "@/components/SectionHeading";
 import CTABlock from "@/components/CTABlock";
 import { getCategories, getAreas } from "@/lib/content";
@@ -152,9 +153,17 @@ export default async function PartnerWerdenPage() {
   const areas = getAreas();
 
   const faqSchema = buildFAQSchema(faqs);
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Startseite", url: SITE_URL },
+    { name: "Partner werden", url: `${SITE_URL}/partner-werden` },
+  ]);
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
