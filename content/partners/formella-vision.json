@@ -10,8 +10,8 @@
   "services": ["Webdesign", "Website-Entwicklung", "SEO-Optimierung", "Branding & Corporate Identity", "Wartung & Support", "Website-Audit"],
   "contact": {
     "contactName": "Christian Formella",
-    "phone": "+49 173 3878209",
-    "email": "info@formellavision.de",
+    "phone": "0173 3878209",
+    "email": "christian@formellavision.de",
     "website": "https://formellavision.de",
     "whatsapp": "https://wa.me/491733878209"
   },
@@ -20,23 +20,24 @@
     "instagram": "https://instagram.com/formella.vision"
   },
   "address": {
-    "street": "Mönckebergstraße 1",
+    "street": "Online",
     "zip": "20095",
     "city": "Hamburg",
-    "googleMapsUrl": "https://maps.google.com/?q=Hamburg+Mitte"
+    "googleMapsUrl": "",
+    "hideAddress": true
   },
   "openingHours": {
-    "monday": "09:00–18:00",
-    "tuesday": "09:00–18:00",
-    "wednesday": "09:00–18:00",
-    "thursday": "09:00–18:00",
-    "friday": "09:00–16:00",
-    "saturday": "Geschlossen",
-    "sunday": "Geschlossen"
+    "monday": "24 Stunden geöffnet",
+    "tuesday": "24 Stunden geöffnet",
+    "wednesday": "24 Stunden geöffnet",
+    "thursday": "24 Stunden geöffnet",
+    "friday": "24 Stunden geöffnet",
+    "saturday": "24 Stunden geöffnet",
+    "sunday": "24 Stunden geöffnet"
   },
   "images": {
-    "logo": "https://res.cloudinary.com/dqkld61zu/image/upload/v1773517266/Christian_Formella_Profilbild_01_raqdy9.webp",
-    "icon": "https://res.cloudinary.com/dqkld61zu/image/upload/v1773517266/Christian_Formella_Profilbild_01_raqdy9.webp",
+    "logo": "https://res.cloudinary.com/dqkld61zu/image/upload/q_auto/f_auto/v1776248979/Christian_Formella_Profilbild_01_raqdy9.avif",
+    "icon": "https://res.cloudinary.com/dqkld61zu/image/upload/q_auto/f_auto/v1776248979/Christian_Formella_Profilbild_01_raqdy9.avif",
     "gallery": []
   },
   "recommendedBy": {
