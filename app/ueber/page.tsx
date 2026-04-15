@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Shield, CircleCheck as CheckCircle, Users, Heart, Star, Award, MapPin } from "lucide-react";
 import { buildMetadata } from "@/lib/seo";
+import { NAP } from "@/lib/constants";
 import SectionHeading from "@/components/SectionHeading";
 import CTABlock from "@/components/CTABlock";
 import FounderSection from "@/components/FounderSection";
@@ -127,7 +128,7 @@ export default function UeberPage() {
                 <div className="text-sm text-stone-500">Unser Zuhause</div>
               </div>
               <div className="rounded-2xl bg-brand-cream border border-brand-blue/10 p-6">
-                <div className="mb-2 text-3xl font-bold text-stone-900">2026</div>
+                <div className="mb-2 text-3xl font-bold text-stone-900">{NAP.foundedYear}</div>
                 <div className="text-sm text-stone-500">Gegründet</div>
               </div>
               <div className="rounded-2xl bg-brand-gold/40 border border-brand-gold p-6">

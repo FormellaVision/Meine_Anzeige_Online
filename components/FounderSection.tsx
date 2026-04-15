@@ -18,13 +18,13 @@ interface FounderSectionProps {
 
 const FOUNDER_PHOTOS: Record<string, string> = {
   "formella-vision": "https://res.cloudinary.com/dqkld61zu/image/upload/v1773517266/Christian_Formella_Profilbild_01_raqdy9.webp",
-  "foto24-hamburg": "https://res.cloudinary.com/dqkld61zu/image/upload/v1773516818/Michael_Wolfsohn_Foto24-Hamburg_q7nvyc.webp",
+  "physiowohltat-norderstedt": "https://res.cloudinary.com/dqkld61zu/image/upload/v1773516818/Michael_Wolfsohn_Foto24-Hamburg_q7nvyc.webp",
 };
 
 const FOUNDER_QUOTES: Record<string, string> = {
   "formella-vision":
     "Gute Zusammenarbeit entsteht durch echte Beziehungen — nicht durch anonyme Plattformen.",
-  "foto24-hamburg":
+  "physiowohltat-norderstedt":
     "Ein Netzwerk ist so stark wie das Vertrauen, das seine Mitglieder einander schenken.",
 };
 

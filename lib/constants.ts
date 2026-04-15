@@ -27,7 +27,7 @@ export const NAP = {
   },
   founders: [
     { name: "Christian Formella", role: "Gründer & Webdesigner", partnerSlug: "formella-vision" },
-    { name: "Michael Wolfsohn", role: "Gründer & Partner", partnerSlug: "foto24-hamburg" },
+    { name: "Michael Wolfsohn", role: "Gründer & Partner", partnerSlug: "physiowohltat-norderstedt" },
   ],
 };
 
