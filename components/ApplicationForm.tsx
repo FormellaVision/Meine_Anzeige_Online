@@ -31,6 +31,7 @@ export default function ApplicationForm({ categories, areas }: ApplicationFormPr
   const [customCategory, setCustomCategory] = useState("");
   const [selectedArea, setSelectedArea] = useState("");
   const [customArea, setCustomArea] = useState("");
+  const [invalidFields, setInvalidFields] = useState<Set<string>>(new Set());
 
   const inputClass = cn(
     "w-full rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm text-stone-900",
@@ -51,15 +52,44 @@ export default function ApplicationForm({ categories, areas }: ApplicationFormPr
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    const formEl = e.currentTarget;
+    const errors = new Set<string>();
+
+    const companyName = (formEl.querySelector('[name="companyName"]') as HTMLInputElement)?.value.trim();
+    const contactName = (formEl.querySelector('[name="contactName"]') as HTMLInputElement)?.value.trim();
+    const email = (formEl.querySelector('[name="email"]') as HTMLInputElement)?.value.trim();
+    const phone = (formEl.querySelector('[name="phone"]') as HTMLInputElement)?.value.trim();
+    const website = (formEl.querySelector('[name="website"]') as HTMLInputElement)?.value.trim();
+    const shortPitch = (formEl.querySelector('[name="shortPitch"]') as HTMLTextAreaElement)?.value.trim();
+    const auditConsent = (formEl.querySelector('[name="auditConsent"]') as HTMLInputElement)?.checked;
+    const privacy = (formEl.querySelector('[name="privacy"]') as HTMLInputElement)?.checked;
+
+    if (!companyName) errors.add("companyName");
+    if (!contactName) errors.add("contactName");
+    if (!email) errors.add("email");
+    if (!phone) errors.add("phone");
+    if (!website) errors.add("website");
+    if (!selectedCategory) errors.add("categorySlug");
+    if (selectedCategory === OTHER_CATEGORY && !customCategory.trim()) errors.add("customCategory");
+    if (!selectedArea) errors.add("areaSlug");
+    if (selectedArea === OTHER_AREA && !customArea.trim()) errors.add("customArea");
+    if (!shortPitch) errors.add("shortPitch");
     if (!isValidRecommendedBy(referredBy)) {
+      errors.add("referredBy");
       setReferredByError("Bitte Name (min. 2 Zeichen) oder 'Nein' eintragen.");
+    }
+    if (!auditConsent) errors.add("auditConsent");
+    if (!privacy) errors.add("privacy");
+
+    if (errors.size > 0) {
+      setInvalidFields(errors);
       return;
     }
 
+    setInvalidFields(new Set());
     setSubmitting(true);
     setError(null);
 
-    const formEl = e.currentTarget;
     const honeypot = (formEl.querySelector('[name="bot-field"]') as HTMLInputElement)?.value;
     if (honeypot) {
       setSubmitting(false);
@@ -172,7 +202,10 @@ export default function ApplicationForm({ categories, areas }: ApplicationFormPr
             required
             autoComplete="organization"
             placeholder="Muster GmbH"
-            className={inputClass}
+            className={cn(
+              inputClass,
+              invalidFields.has("companyName") && "border-red-300 bg-red-50/40"
+            )}
           />
         </div>
         <div>
@@ -186,7 +219,10 @@ export default function ApplicationForm({ categories, areas }: ApplicationFormPr
             required
             autoComplete="name"
             placeholder="Max Mustermann"
-            className={inputClass}
+            className={cn(
+              inputClass,
+              invalidFields.has("contactName") && "border-red-300 bg-red-50/40"
+            )}
           />
         </div>
       </div>
@@ -203,7 +239,10 @@ export default function ApplicationForm({ categories, areas }: ApplicationFormPr
             required
             autoComplete="email"
             placeholder="max@beispiel.de"
-            className={inputClass}
+            className={cn(
+              inputClass,
+              invalidFields.has("email") && "border-red-300 bg-red-50/40"
+            )}
           />
         </div>
         <div>
@@ -217,7 +256,10 @@ export default function ApplicationForm({ categories, areas }: ApplicationFormPr
             required
             autoComplete="tel"
             placeholder="+49 40 123456"
-            className={inputClass}
+            className={cn(
+              inputClass,
+              invalidFields.has("phone") && "border-red-300 bg-red-50/40"
+            )}
           />
         </div>
       </div>
@@ -233,7 +275,10 @@ export default function ApplicationForm({ categories, areas }: ApplicationFormPr
           required
           autoComplete="url"
           placeholder="https://www.ihr-unternehmen.de"
-          className={inputClass}
+          className={cn(
+            inputClass,
+            invalidFields.has("website") && "border-red-300 bg-red-50/40"
+          )}
         />
       </div>
 
@@ -249,7 +294,11 @@ export default function ApplicationForm({ categories, areas }: ApplicationFormPr
               required
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className={cn(inputClass, "appearance-none cursor-pointer pr-9")}
+              className={cn(
+                inputClass,
+                "appearance-none cursor-pointer pr-9",
+                invalidFields.has("categorySlug") && "border-red-300 bg-red-50/40"
+              )}
             >
               <option value="" disabled>Bitte wählen …</option>
               {categories.map((cat) => (
@@ -267,7 +316,11 @@ export default function ApplicationForm({ categories, areas }: ApplicationFormPr
               value={customCategory}
               onChange={(e) => setCustomCategory(e.target.value)}
               placeholder="Bitte eintragen …"
-              className={cn(inputClass, "mt-3")}
+              className={cn(
+                inputClass,
+                "mt-3",
+                invalidFields.has("customCategory") && "border-red-300 bg-red-50/40"
+              )}
               required={selectedCategory === OTHER_CATEGORY}
             />
           )}
@@ -283,7 +336,11 @@ export default function ApplicationForm({ categories, areas }: ApplicationFormPr
               required
               value={selectedArea}
               onChange={(e) => setSelectedArea(e.target.value)}
-              className={cn(inputClass, "appearance-none cursor-pointer pr-9")}
+              className={cn(
+                inputClass,
+                "appearance-none cursor-pointer pr-9",
+                invalidFields.has("areaSlug") && "border-red-300 bg-red-50/40"
+              )}
             >
               <option value="" disabled>Bitte wählen …</option>
               {areas.map((area) => (
@@ -301,7 +358,11 @@ export default function ApplicationForm({ categories, areas }: ApplicationFormPr
               value={customArea}
               onChange={(e) => setCustomArea(e.target.value)}
               placeholder="Bitte eintragen …"
-              className={cn(inputClass, "mt-3")}
+              className={cn(
+                inputClass,
+                "mt-3",
+                invalidFields.has("customArea") && "border-red-300 bg-red-50/40"
+              )}
               required={selectedArea === OTHER_AREA}
             />
           )}
@@ -319,7 +380,11 @@ export default function ApplicationForm({ categories, areas }: ApplicationFormPr
           rows={4}
           maxLength={500}
           onChange={(e) => setPitchLength(e.target.value.length)}
-          className={cn(inputClass, "resize-none")}
+          className={cn(
+            inputClass,
+            "resize-none",
+            invalidFields.has("shortPitch") && "border-red-300 bg-red-50/40"
+          )}
           placeholder="Was machen Sie? Wen bedienen Sie? Was macht Ihr Unternehmen besonders?"
         />
         <p className="mt-1.5 flex justify-between text-xs text-stone-400">
@@ -341,8 +406,13 @@ export default function ApplicationForm({ categories, areas }: ApplicationFormPr
           value={referredBy}
           onChange={(e) => {
             setReferredBy(e.target.value);
-            if (referredByError && isValidRecommendedBy(e.target.value)) {
+            if ((referredByError || invalidFields.has("referredBy")) && isValidRecommendedBy(e.target.value)) {
               setReferredByError(null);
+              setInvalidFields(prev => {
+                const newSet = new Set(prev);
+                newSet.delete("referredBy");
+                return newSet;
+              });
             }
           }}
           onBlur={handleReferredByBlur}
@@ -350,7 +420,7 @@ export default function ApplicationForm({ categories, areas }: ApplicationFormPr
           placeholder="Name eines Partners/Mitglieds oder 'Nein'"
           className={cn(
             inputClass,
-            referredByError ? "border-red-400 focus:border-red-400 focus:ring-red-200" : ""
+            (referredByError || invalidFields.has("referredBy")) && "border-red-300 bg-red-50/40"
           )}
         />
         {referredByError ? (
@@ -362,7 +432,12 @@ export default function ApplicationForm({ categories, areas }: ApplicationFormPr
         )}
       </div>
 
-      <div className="rounded-xl bg-brand-cream p-5 space-y-4 border border-brand-blue/10">
+      <div className={cn(
+        "rounded-xl p-5 space-y-4 border",
+        invalidFields.has("auditConsent") || invalidFields.has("privacy")
+          ? "bg-red-50/40 border-red-300"
+          : "bg-brand-cream border-brand-blue/10"
+      )}>
         <h4 className="text-sm font-bold text-stone-900">Zustimmungen</h4>
 
         <label className="flex cursor-pointer items-start gap-3">
